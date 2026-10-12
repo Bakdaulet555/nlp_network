@@ -1,0 +1,25 @@
+request,label,note
+/search?q=o'reilly+python+book,Normal,апостроф в фамилии
+/search?q=select+a+size+guide,Normal,слово select
+/search?q=javascript+tutorial+for+beginners,Normal,слово javascript
+/search?q=drop+shipping+suppliers,Normal,слово drop
+/search?q=union+jack+flag,Normal,слово union
+/search?q=script+writing+course,Normal,слово script
+/search?q=rock+%26+roll+records,Normal,URL-кодированный амперсанд
+/search?q=ben+%26+jerry%27s,Normal,кодированный апостроф
+/search?q=how+to+delete+my+account,Normal,слово delete
+/search?q=insert+coin+arcade+machine,Normal,слово insert
+/search?q=update+drivers+windows+11,Normal,слово update
+/search?q=c%2B%2B+vs+java,Normal,кодированные плюсы
+/search?q=html+table+example,Normal,слово html
+/search?q=%3C3+valentine+card,Normal,символ <
+/search?q=price+%3C+100+and+rating+%3E+4,Normal,сравнения < >
+/profile?user=o'connor&tab=settings,Normal,апостроф в логине
+comment=Great product -- would buy again!&rating=5,Normal,двойной дефис
+comment=Size 10 = perfect fit; color as shown,Normal,знаки = и ;
+/api/v1/orders/1024?fields=id%2Cstatus,Normal,кодированная запятая
+/blog/how-to-choose-a-laptop?utm_source=newsletter,Normal,обычная ссылка
+"/search?q=""best laptop 2026""",Normal,кавычки
+/search?q=alert+bracelet+medical,Normal,слово alert
+/search?q=1%3D1+math+identity,Normal,1=1 в обычном тексте
+/search?q=where+to+buy+tables+and+chairs,Normal,слова where и tables

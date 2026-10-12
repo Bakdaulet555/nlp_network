@@ -1,0 +1,10 @@
+[server]
+# Ограничение размера загружаемого файла (МБ) на уровне сервера Streamlit.
+# Дополнительно размер проверяется в src/common/io_utils.read_csv_safely.
+maxUploadSize = 20
+# Прототип запускается только локально
+address = "127.0.0.1"
+headless = true
+
+[browser]
+gatherUsageStats = false

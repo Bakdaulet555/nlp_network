@@ -1,0 +1,330 @@
+{
+  "nlp": {
+    "sgd_classifier": {
+      "accuracy": 0.9961,
+      "precision_macro": 0.9956,
+      "recall_macro": 0.9963,
+      "f1_macro": 0.9959,
+      "precision_weighted": 0.9962,
+      "recall_weighted": 0.9961,
+      "f1_weighted": 0.9961,
+      "per_class": {
+        "Normal": {
+          "precision": 0.9868,
+          "recall": 1.0,
+          "f1-score": 0.9934,
+          "support": 150.0
+        },
+        "SQL Injection": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 186.0
+        },
+        "XSS": {
+          "precision": 1.0,
+          "recall": 0.9888,
+          "f1-score": 0.9944,
+          "support": 179.0
+        }
+      },
+      "labels": [
+        "Normal",
+        "SQL Injection",
+        "XSS"
+      ],
+      "confusion_matrix": [
+        [
+          150,
+          0,
+          0
+        ],
+        [
+          0,
+          186,
+          0
+        ],
+        [
+          2,
+          0,
+          177
+        ]
+      ],
+      "support": 515,
+      "best_params": {
+        "model__alpha": 1e-05
+      },
+      "cv_f1_macro": 0.9913,
+      "false_positive_rate": 0.0
+    },
+    "complement_naive_bayes": {
+      "accuracy": 0.9981,
+      "precision_macro": 0.9982,
+      "recall_macro": 0.9978,
+      "f1_macro": 0.998,
+      "precision_weighted": 0.9981,
+      "recall_weighted": 0.9981,
+      "f1_weighted": 0.9981,
+      "per_class": {
+        "Normal": {
+          "precision": 1.0,
+          "recall": 0.9933,
+          "f1-score": 0.9967,
+          "support": 150.0
+        },
+        "SQL Injection": {
+          "precision": 0.9947,
+          "recall": 1.0,
+          "f1-score": 0.9973,
+          "support": 186.0
+        },
+        "XSS": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 179.0
+        }
+      },
+      "labels": [
+        "Normal",
+        "SQL Injection",
+        "XSS"
+      ],
+      "confusion_matrix": [
+        [
+          149,
+          1,
+          0
+        ],
+        [
+          0,
+          186,
+          0
+        ],
+        [
+          0,
+          0,
+          179
+        ]
+      ],
+      "support": 515,
+      "best_params": {
+        "model__alpha": 0.1
+      },
+      "cv_f1_macro": 0.9909,
+      "false_positive_rate": 0.0067
+    },
+    "dataset": {
+      "train_rows": 2185,
+      "test_rows": 515,
+      "evaluation": "predefined_group_holdout",
+      "class_distribution": {
+        "SQL Injection": 900,
+        "Normal": 900,
+        "XSS": 900
+      },
+      "train_distribution": {
+        "Normal": 750,
+        "XSS": 721,
+        "SQL Injection": 714
+      },
+      "test_distribution": {
+        "SQL Injection": 186,
+        "XSS": 179,
+        "Normal": 150
+      }
+    },
+    "data_quality": {
+      "rows": 2700,
+      "empty_removed": 0,
+      "conflicts_removed": 0,
+      "duplicates_removed": 0,
+      "rows_after_cleaning": 2700,
+      "class_distribution": {
+        "SQL Injection": 900,
+        "Normal": 900,
+        "XSS": 900
+      }
+    }
+  },
+  "network": {
+    "dataset": {
+      "train_rows": 3000,
+      "test_rows": 1000,
+      "class_distribution": {
+        "BENIGN": 800,
+        "DoS Hulk": 800,
+        "PortScan": 800,
+        "DDoS": 800,
+        "SSH-Patator": 800
+      }
+    },
+    "isolation_forest": {
+      "accuracy": 0.515,
+      "precision_macro": 0.6066,
+      "recall_macro": 0.6538,
+      "f1_macro": 0.5021,
+      "precision_weighted": 0.8044,
+      "recall_weighted": 0.515,
+      "f1_weighted": 0.5502,
+      "per_class": {
+        "Normal": {
+          "precision": 0.277,
+          "recall": 0.885,
+          "f1-score": 0.4219,
+          "support": 200.0
+        },
+        "Attack": {
+          "precision": 0.9363,
+          "recall": 0.4225,
+          "f1-score": 0.5823,
+          "support": 800.0
+        }
+      },
+      "labels": [
+        "Normal",
+        "Attack"
+      ],
+      "confusion_matrix": [
+        [
+          177,
+          23
+        ],
+        [
+          462,
+          338
+        ]
+      ],
+      "support": 1000,
+      "false_positive_rate": 0.115,
+      "contamination": 0.1,
+      "detection_rate_by_label": {
+        "BENIGN": 0.115,
+        "DDoS": 0.28,
+        "DoS Hulk": 0.16,
+        "PortScan": 1.0,
+        "SSH-Patator": 0.25
+      }
+    },
+    "random_forest": {
+      "accuracy": 0.972,
+      "precision_macro": 0.9722,
+      "recall_macro": 0.972,
+      "f1_macro": 0.9721,
+      "precision_weighted": 0.9722,
+      "recall_weighted": 0.972,
+      "f1_weighted": 0.9721,
+      "per_class": {
+        "BENIGN": {
+          "precision": 0.9949,
+          "recall": 0.98,
+          "f1-score": 0.9874,
+          "support": 200.0
+        },
+        "DDoS": {
+          "precision": 0.935,
+          "recall": 0.935,
+          "f1-score": 0.935,
+          "support": 200.0
+        },
+        "DoS Hulk": {
+          "precision": 0.931,
+          "recall": 0.945,
+          "f1-score": 0.938,
+          "support": 200.0
+        },
+        "PortScan": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 200.0
+        },
+        "SSH-Patator": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 200.0
+        }
+      },
+      "labels": [
+        "BENIGN",
+        "DDoS",
+        "DoS Hulk",
+        "PortScan",
+        "SSH-Patator"
+      ],
+      "confusion_matrix": [
+        [
+          196,
+          3,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          187,
+          13,
+          0,
+          0
+        ],
+        [
+          1,
+          10,
+          189,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          200,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          200
+        ]
+      ],
+      "support": 1000,
+      "best_params": {
+        "model__max_depth": null,
+        "model__min_samples_leaf": 3
+      },
+      "cv_f1_macro": 0.9787,
+      "false_positive_rate": 0.02,
+      "feature_importance": {
+        "Total Backward Packets": 0.183,
+        "Total Length of Fwd Packets": 0.1402,
+        "Destination Port": 0.1339,
+        "Average Packet Size": 0.1256,
+        "Total Fwd Packets": 0.1245,
+        "Bwd Packet Length Mean": 0.0937,
+        "Fwd Packet Length Mean": 0.0651,
+        "Flow Duration": 0.058,
+        "Total Length of Bwd Packets": 0.0411,
+        "Flow Bytes/s": 0.012,
+        "Flow Packets/s": 0.0117,
+        "Flow IAT Mean": 0.006,
+        "SYN Flag Count": 0.0048,
+        "ACK Flag Count": 0.0004
+      }
+    },
+    "data_quality": {
+      "rows": 4080,
+      "columns": 16,
+      "duplicates": 80,
+      "missing_total": 41,
+      "missing_by_column": {
+        "Flow IAT Mean": 41
+      },
+      "infinite_values": 41,
+      "duplicates_removed": 80,
+      "rows_after_cleaning": 4000
+    }
+  }
+}
